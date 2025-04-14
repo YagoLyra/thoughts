@@ -11,6 +11,10 @@ const conn = require("./db/conn");
 const Thought = require("./models/Thought");
 const User = require("./models/User");
 
+const thoughtsRoutes = require("./routes/thoughtsRoutes");
+
+const ThoughtController = require("./controllers/ThoughtController");
+
 app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
 
@@ -47,6 +51,10 @@ app.use((req, res, next) => {
 
   next();
 });
+
+app.use("/thoughts", thoughtsRoutes);
+
+app.get("/", ThoughtController.showThoughts);
 
 conn
   .sync({ force: false })
