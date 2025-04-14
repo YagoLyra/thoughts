@@ -12,6 +12,7 @@ const Thought = require("./models/Thought");
 const User = require("./models/User");
 
 const thoughtsRoutes = require("./routes/thoughtsRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 const ThoughtController = require("./controllers/ThoughtController");
 
@@ -53,6 +54,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/thoughts", thoughtsRoutes);
+app.use("/", authRoutes);
 
 app.get("/", ThoughtController.showThoughts);
 
