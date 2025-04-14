@@ -44,6 +44,75 @@
     padding: 2em;
 }
 
+.message {
+    padding: 1em;
+    color: #004085;
+    background-color: #CCE5FF;
+    border: 1px solid #B8DAFF;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto 2em;
+    max-width: 60%;
+}
+
+.auth-container {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container h2 {
+    margin-bottom: 1em;
+    color: #FFF;
+    border-left: 4px solid #F6982D;
+    padding-left: 0.3em;
+    width: 100px;
+}
+
+.auth-container a {
+    color: #F6982D;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.form-control input,
+.form-control textarea {
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #F6982D;
+}
+
+form input[type="submit"],
+.btn {
+    background-color: transparent;
+    color: #F6982D;
+    border: 2px solid #F6982D;
+    padding: 0.5em 1.2em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+form input[type="submit"]:hover,
+.btn:hover {
+    background-color: #F6982D;
+    color: #FFF;
+}
+
 footer {
     height: 150px;
     display: flex;
