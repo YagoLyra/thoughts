@@ -1,0 +1,18 @@
+<div class="thought-form-container">
+  <a href="/thoghts/dashboard">Voltar</a>
+  <h1>Editando Pensamento</h1>
+  <form action="/thoughts/edit" method="POST">
+    <input type="hidden" name="id" value="{{thought.id}}" />
+    <div class="form-control">
+      <label for="title">Pensamento:</label>
+      <input
+        type="text"
+        name="title"
+        placeholder="Digite o seu pensamento..."
+        value="{{thought.title}}"
+        required
+      />
+    </div>
+    <input type="submit" value="Editar Pensamento" />
+  </form>
+</div>
