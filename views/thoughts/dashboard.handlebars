@@ -9,8 +9,8 @@
       <li>
         <span class="label">{{this.title}}</span>
         <span class="actions">
-          <a href="/" class="btn">Editar</a>
-          <form action="/">
+          <a href="/thoughts/edit/{{this.id}}" class="btn">Editar</a>
+          <form action="/thoughts/remove" method="POST">
             <input type="hidden" name="id" value="{{this.id}}" />
             <input type="submit" value="Excluir" class="btn" />
           </form>
@@ -18,4 +18,8 @@
       </li>
     {{/each}}
   </ul>
+  {{#if emptyThoughts}}
+    <p>Você ainda não tem pensamentos cadastrados, comece a criar
+      <a href="/thoughts/add">por aqui!</a></p>
+  {{/if}}
 </div>
